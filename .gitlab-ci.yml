@@ -1,0 +1,11 @@
+stages:
+  - test
+
+pytest_test:
+  stage: test
+  image: python:3.11
+
+#仍然需要下载pytest  因为在GitLab当中这是一个全新的环境  没有安装pytest
+  script:
+    - pip install pytest
+    - pytest
