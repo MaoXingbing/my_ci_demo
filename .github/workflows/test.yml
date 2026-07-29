@@ -1,0 +1,27 @@
+name: pytest test
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 拉取你的代码
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 准备 Python 环境
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # 安装依赖
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # 执行测试
+      - name: Run pytest
+        run: pytest
