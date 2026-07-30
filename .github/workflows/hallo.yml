@@ -2,7 +2,9 @@ name:
     hello world
 
 on: 
-    push
+    push:
+    schedule:
+        - cron: '* * * * *' 
 
 jobs:
     say-hello:
