@@ -1,0 +1,17 @@
+name: 使用内置上下文变量
+on:
+  push:
+
+jobs:
+    content1:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: 使用内置命令打印
+              run: |
+                echo "当前工作流名称: ${{ github.workflow }}"
+                echo "当前工作流运行ID: ${{ github.run_id }}"
+                echo "当前工作流运行号: ${{ github.run_number }}"
+                echo "当前工作流运行触发事件: ${{ github.event_name }}"
+                echo "当前工作流运行触发分支: ${{ github.ref }}"
+                echo "当前工作流运行触发提交SHA: ${{ github.sha }}"
