@@ -1,10 +1,11 @@
 name: 
-    hello world
+    hello world测试
 
 on: 
     push:
     schedule:
         - cron: '*/5 * * * *' 
+    workflow_dispatch:
 
 jobs:
     say-hello:

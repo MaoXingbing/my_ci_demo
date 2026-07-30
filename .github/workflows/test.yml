@@ -1,4 +1,4 @@
-name: pytest test
+name: 关于pytest的测试
 
 on:
   push:
