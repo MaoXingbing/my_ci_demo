@@ -25,3 +25,7 @@ jobs:
       # 执行测试
       - name: Run pytest
         run: pytest
+
+      - name: if条件测试
+        if: success()
+        run: echo "测试成功"
