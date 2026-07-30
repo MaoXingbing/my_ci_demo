@@ -26,6 +26,10 @@ jobs:
       - name: Run pytest
         run: pytest
 
-      - name: if条件测试
+      - name: if成功条件测试
         if: success()
         run: echo "测试成功"
+
+      - name: if失败条件测试
+        if: failure()
+        run: echo "测试失败"
