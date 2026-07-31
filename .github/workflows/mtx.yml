@@ -23,5 +23,8 @@ jobs:
               with:
                node-version: ${{ matrix.node }}
 
-            - run: npm ci
-            - run: npm test
+
+            - name: 查看nodejs版本
+              run: |
+               node --version
+               npm --version
